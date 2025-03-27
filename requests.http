@@ -1,0 +1,32 @@
+@BaseUrl = http://localhost:5000
+
+POST {{BaseUrl}}/posters/
+Content-Type: application/json
+
+{
+    "Title": "Супермэн больше не супер",
+    "Description": "После бутылочки 0.5 охоты и беседы с Бэтменом, Супермэн решил оставить свои дела",
+    "Owner": "Бэтмен"
+}
+
+###
+
+GET {{BaseUrl}}/posters/
+Content-Type: application/json
+
+###
+
+GET {{BaseUrl}}/one_poster/1/
+Content-Type: application/json
+
+###
+
+PATCH {{BaseUrl}}/one_poster/1/
+Content-Type: application/json
+
+{
+    "Title": "Супермэн извини"
+}
+
+###
+DELETE {{BaseUrl}}/one_poster/1/
